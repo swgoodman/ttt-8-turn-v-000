@@ -32,8 +32,7 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
-  else !valid_move?(board, index)
-    "Please try again. Enter a number between 1 and 9:"
-    input = gets.strip
+  else
+    turn(board)
   end
 end
